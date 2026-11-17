@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the site work well on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       HOW TO SERVICE THIS FILE - READ THIS FIRST
+
+       1. To change LOUNGE NAME: Search for "KASI VIBES" and replace it
+       2. To change WHATSAPP NUMBER: Search for "27731234567" and replace it
+          Example: If your number is 073 123 4567, write 27731234567
+          (27 + number without the first 0)
+       3. To change ADDRESS: Search for "123 Main Road"
+       4. To change PRICES: Search for "R95" etc in TOP 3 section
+       5. To change PICTURES: Replace the links that start with https://images...
+       6. DO NOT delete the <!-- --><!-- comments, they help you find things
+       ============================================================ -->
+
+  <!-- This is what shows on the Google tab -->
+  <title>Kasi Vibes Lounge | Akasia, Pretoria</title>
+
+  <!-- This loads Tailwind - it makes the design look clean -->
+  <!-- You do NOT need to change this -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- This loads the font - Inter is clean and simple -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Small style - just sets the font for the whole site -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<!-- ============================================================
+     BODY START
+     bg-[#FAFAF8] = very light cream background (minimal look)
+     text-[#1A1A1A] = almost black text (easy to read)
+     ============================================================ -->
+<body class="bg-[#FAFAF8] text-[#1A1A1A]">
+
+<!-- ============================================================
+     SECTION 1: TOP NAVIGATION BAR
+     This is the bar at the very top that stays when you scroll
+
+     TO EDIT:
+     - Change "KASI VIBES" to your lounge name
+     - Change "AKASIA, PRETORIA" to your area
+     ============================================================ -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+
+    <!-- Logo / Name - Left side -->
+    <div>
+      <!-- CHANGE YOUR NAME HERE -->
+      <h1 class="font-extrabold text-xl tracking-tight">KASI VIBES</h1>
+      <!-- CHANGE YOUR AREA HERE -->
+      <p class="text-[11px] text-neutral-500 tracking-widest">LOUNGE • AKASIA, PRETORIA</p>
+    </div>
+
+    <!-- Links - Middle - Hidden on phone, shows on computer -->
+    <nav class="hidden md:flex gap-7 text-sm font-medium text-neutral-600">
+      <a href="index.html" class="text-black font-semibold">Home</a>
+      <!-- This goes to your second file: menu.html -->
+      <a href="menu.html">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <!-- Button - Right side - Goes to booking form at bottom -->
+    <a href="#book" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold">Book a Table</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     SECTION 2: HERO - BIG INTRO AT TOP
+     This is the first thing people see
+
+     TO EDIT:
+     - Change headline text: "A calm place to eat..."
+     - Change description below it
+     - Change big picture: replace the https://images... link
+     - Change 3 small pictures below big picture the same way
+     ============================================================ -->
+<section class="max-w-6xl mx-auto px-5 pt-10 md:pt-16 pb-10">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left side - Text -->
+    <div>
+      <!-- Small label above headline -->
+      <p class="text-xs font-semibold tracking-widest text-neutral-500">GAUTENG • OPEN WED - SUN</p>
+
+      <!-- Main headline - CHANGE THIS IF YOU WANT -->
+      <h2 class="text-4xl md:text-6xl font-extrabold leading-[1.02] tracking-tight mt-3">
+        A calm place<br>to eat, drink<br>and unwind.
+      </h2>
+
+      <!-- Short description -->
+      <p class="text-neutral-600 mt-4 leading-relaxed">
+        A lounge in Akasia, Pretoria for good food, music and relaxed evenings with friends and family.
+      </p>
+
+      <!-- Two buttons -->
+      <div class="flex gap-3 mt-6">
+        <!-- Button 1 - Goes to booking -->
+        <a href="#book" class="bg-black text-white px-6 py-3.5 rounded-full font-semibold text-sm">Book a Table</a>
+        <!-- Button 2 - Goes to menu.html file -->
+        <a href="menu.html" class="bg-white border border-neutral-300 px-6 py-3.5 rounded-full font-semibold text-sm">View Menu</a>
+      </div>
+
+      <!-- Small info row - Rating, Hours, Parking -->
+      <div class="flex gap-6 mt-7 text-sm">
+        <div>
+          <p class="font-bold">4.8 / 5</p>
+          <p class="text-neutral-500 text-xs">1,200 reviews</p>
+        </div>
+        <div>
+          <p class="font-bold">12PM - 2AM</p>
+          <p class="text-neutral-500 text-xs">Fri - Sat</p>
+        </div>
+        <div>
+          <p class="font-bold">Free Parking</p>
+          <p class="text-neutral-500 text-xs">Secure</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side - Pictures -->
+    <div>
+      <!-- BIG PICTURE - Replace this link to change picture -->
+      <!-- Tip: Use a picture of YOUR lounge from your phone, upload to Google Drive / Imgur, paste link here -->
+      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80" class="w-full h-[380px] md:h-[440px] object-cover rounded-[24px]" alt="Inside the lounge">
+
+      <!-- 3 SMALL PICTURES UNDER BIG ONE -->
+      <div class="flex gap-2 mt-3">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=80" class="w-1/3 h-24 object-cover rounded-2xl" alt="Food">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80" class="w-1/3 h-24 object-cover rounded-2xl" alt="Tables">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" class="w-1/3 h-24 object-cover rounded-2xl" alt="Dinner">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3: TOP 3 MOST ORDERED FOOD
+     This is the most important part - shows your best sellers
+
+     TO EDIT EACH CARD:
+     - Change picture: replace https://images... link
+     - Change "#1 Most Ordered" to "#1" etc - keep as is if you like
+     - Change food name: e.g. "Kasi Burger & Chips"
+     - Change description: e.g. "Beef patty..."
+     - Change price: e.g. "R95"
+     - Change "Ordered 850+ times" to your real number
+     - If your Top 3 is different, just change name + price + picture
+     ============================================================ -->
+<section class="max-w-6xl mx-auto px-5 py-10">
+  <!-- Title row -->
+  <div class="flex items-end justify-between">
+    <div>
+      <p class="text-xs font-semibold tracking-widest text-neutral-500">MOST LOVED BY OUR GUESTS</p>
+      <h3 class="text-3xl font-extrabold tracking-tight mt-1">Top 3 Most Ordered</h3>
+    </div>
+    <!-- Link to full menu page -->
+    <a href="menu.html" class="hidden md:block text-sm font-semibold underline">See full menu</a>
+  </div>
+
+  <!-- 3 Cards in a row -->
+  <div class="grid md:grid-cols-3 gap-4 mt-6">
+
+    <!-- ========== CARD 1 - TOP 1 ========== -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] overflow-hidden">
+      <div class="relative">
+        <!-- PICTURE 1 - CHANGE HERE -->
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80" class="w-full h-52 object-cover" alt="Kasi Burger">
+        <!-- BADGE - CHANGE TEXT IF NEEDED -->
+        <span class="absolute top-3 left-3 bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full">#1 Most Ordered</span>
+      </div>
+      <div class="p-5">
+        <!-- FOOD NAME 1 - CHANGE HERE -->
+        <h4 class="font-bold text-lg">Kasi Burger & Chips</h4>
+        <!-- DESCRIPTION 1 - CHANGE HERE -->
+        <p class="text-neutral-500 text-sm mt-1">Beef patty, cheese, house sauce, crispy chips.</p>
+        <div class="flex items-center justify-between mt-4">
+          <!-- PRICE 1 - CHANGE HERE -->
+          <span class="font-extrabold text-lg">R95</span>
+          <!-- HOW MANY TIMES ORDERED - CHANGE HERE -->
+          <span class="text-xs text-neutral-500">Ordered 850+ times</span>
+        </div>
+        <a href="menu.html" class="block text-center mt-4 bg-neutral-100 py-3 rounded-full font-semibold text-sm">View in Menu</a>
+      </div>
+    </div>
+
+    <!-- ========== CARD 2 - TOP 2 ========== -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] overflow-hidden">
+      <div class="relative">
+        <!-- PICTURE 2 - CHANGE HERE -->
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" class="w-full h-52 object-cover" alt="Grilled Chicken">
+        <span class="absolute top-3 left-3 bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full">#2 Most Ordered</span>
+      </div>
+      <div class="p-5">
+        <!-- FOOD NAME 2 - CHANGE HERE -->
+        <h4 class="font-bold text-lg">Grilled Chicken & Pap</h4>
+        <!-- DESCRIPTION 2 - CHANGE HERE -->
+        <p class="text-neutral-500 text-sm mt-1">Quarter chicken, pap, chakalaka and gravy.</p>
+        <div class="flex items-center justify-between mt-4">
+          <!-- PRICE 2 - CHANGE HERE -->
+          <span class="font-extrabold text-lg">R120</span>
+          <span class="text-xs text-neutral-500">Ordered 720+ times</span>
+        </div>
+        <a href="menu.html" class="block text-center mt-4 bg-neutral-100 py-3 rounded-full font-semibold text-sm">View in Menu</a>
+      </div>
+    </div>
+
+    <!-- ========== CARD 3 - TOP 3 ========== -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] overflow-hidden">
+      <div class="relative">
+        <!-- PICTURE 3 - CHANGE HERE -->
+        <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?w=800&q=80" class="w-full h-52 object-cover" alt="Platter">
+        <span class="absolute top-3 left-3 bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full">#3 Most Ordered</span>
+      </div>
+      <div class="p-5">
+        <!-- FOOD NAME 3 - CHANGE HERE -->
+        <h4 class="font-bold text-lg">Vibes Platter for 4</h4>
+        <!-- DESCRIPTION 3 - CHANGE HERE -->
+        <p class="text-neutral-500 text-sm mt-1">Wings, ribs, wors, chips and onion rings.</p>
+        <div class="flex items-center justify-between mt-4">
+          <!-- PRICE 3 - CHANGE HERE -->
+          <span class="font-extrabold text-lg">R449</span>
+          <span class="text-xs text-neutral-500">Ordered 610+ times</span>
+        </div>
+        <a href="menu.html" class="block text-center mt-4 bg-neutral-100 py-3 rounded-full font-semibold text-sm">View in Menu</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4: EVENTS - THIS WEEK
+
+     TO EDIT:
+     - Change day: "FRIDAY • 8PM"
+     - Change event name: "Amapiano Friday"
+     - Change description
+     - To add a new event, copy one whole <div> block and paste below
+     ============================================================ -->
+<section id="events" class="max-w-6xl mx-auto px-5 py-10">
+  <h3 class="text-3xl font-extrabold tracking-tight">This Week</h3>
+  <div class="grid md:grid-cols-3 gap-4 mt-5">
+
+    <!-- EVENT 1 -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] p-5">
+      <p class="text-xs font-semibold text-neutral-500">FRIDAY • 8PM</p>
+      <h4 class="font-bold mt-2">Amapiano Friday</h4>
+      <p class="text-neutral-500 text-sm mt-1">Live DJs. Free entry before 9PM.</p>
+    </div>
+
+    <!-- EVENT 2 -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] p-5">
+      <p class="text-xs font-semibold text-neutral-500">SATURDAY • 7PM</p>
+      <h4 class="font-bold mt-2">Saturday Night</h4>
+      <p class="text-neutral-500 text-sm mt-1">Hip Hop and RnB. Birthday packages available.</p>
+    </div>
+
+    <!-- EVENT 3 -->
+    <div class="bg-white border border-neutral-200 rounded-[20px] p-5">
+      <p class="text-xs font-semibold text-neutral-500">SUNDAY • 12PM</p>
+      <h4 class="font-bold mt-2">Sunday Chill</h4>
+      <p class="text-neutral-500 text-sm mt-1">Braai, soul music and family friendly until 6PM.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5: BOOK A TABLE FORM
+     When customer clicks "Confirm Booking", it opens WhatsApp
+     with all their details already typed.
+
+     TO EDIT:
+     - Change address: "123 Main Road..."
+     - Change opening hours
+     - Change phone numbers
+     - DO NOT change the id="..." parts - the code needs them
+       e.g. id="bName", id="bPhone", id="bDate" must stay the same
+     ============================================================ -->
+<section id="book" class="max-w-6xl mx-auto px-5 pb-14">
+  <div class="bg-white border border-neutral-200 rounded-[24px] p-6 md:p-10 grid md:grid-cols-2 gap-8">
+
+    <!-- Left side - Info about booking -->
+    <div>
+      <h3 class="text-3xl font-extrabold tracking-tight">Book a Table</h3>
+      <p class="text-neutral-600 mt-2">Book in 30 seconds. We confirm on WhatsApp.</p>
+
+      <!-- Bullet points - CHANGE IF YOU WANT -->
+      <ul class="mt-5 space-y-2 text-sm text-neutral-700">
+        <li>• Birthday groups of 10+ get a complimentary platter</li>
+        <li>• Secure parking available</li>
+        <li>• 18+ after 9PM - Please bring ID</li>
+      </ul>
+
+      <!-- Address + Hours - CHANGE HERE -->
+      <div class="mt-6 text-sm">
+        <p class="font-semibold">Visit Us</p>
+        <!-- CHANGE ADDRESS HERE -->
+        <p class="text-neutral-600 mt-1">
+          123 Main Road, Akasia, Pretoria, Gauteng 0182<br>
+          Wed - Thu: 12PM - 12AM | Fri - Sat: 12PM - 2AM | Sun: 12PM - 10PM
+        </p>
+        <!-- CHANGE PHONE NUMBERS HERE -->
+        <p class="mt-2 font-semibold">012 345 6789 | WhatsApp 073 123 4567</p>
+      </div>
+    </div>
+
+    <!-- Right side - The Form -->
+    <!-- Each input has an id - DO NOT rename the ids -->
+    <div class="space-y-3">
+      <!-- Name field -->
+      <input id="bName" placeholder="Your Name" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5 outline-none">
+      <!-- Phone field -->
+      <input id="bPhone" placeholder="Phone / WhatsApp" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5 outline-none">
+      <!-- Date + People in one row -->
+      <div class="grid grid-cols-2 gap-3">
+        <input id="bDate" type="date" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5">
+        <!-- People dropdown - To add more options, copy one <option> line -->
+        <select id="bPeople" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5">
+          <option>2 People</option>
+          <option>4 People</option>
+          <option>6 People</option>
+          <option>10+ People</option>
+        </select>
+      </div>
+      <!-- Occasion dropdown -->
+      <select id="bOccasion" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5">
+        <option>Just Chilling</option>
+        <option>Birthday</option>
+        <option>Date Night</option>
+        <option>Friends Night Out</option>
+      </select>
+      <!-- Message box -->
+      <textarea id="bMsg" placeholder="Any special request?" class="w-full bg-[#FAFAF8] border border-neutral-200 rounded-xl px-4 py-3.5 h-20"></textarea>
+      <!-- Button - runs the JavaScript below -->
+      <button onclick="bookTable()" class="w-full bg-black text-white py-4 rounded-full font-semibold">Confirm Booking on WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6: FOOTER - BOTTOM OF PAGE
+
+     TO EDIT: Change name and area
+     ============================================================ -->
+<footer id="visit" class="border-t border-neutral-200 py-8 text-center text-sm text-neutral-500 px-5">
+  <p class="font-bold text-black">KASI VIBES LOUNGE</p>
+  <p class="mt-1">Akasia, Pretoria, Gauteng • Drink Responsibly</p>
+  <p class="mt-1 text-xs">© 2026 Kasi Vibes Lounge</p>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT - BOOKING LOGIC
+     You do NOT need to understand this fully.
+
+     ONLY CHANGE THIS ONE LINE:
+     Search for "27731234567" below and replace with YOUR WhatsApp
+     Example: https://wa.me/27731234567?text=
+     ============================================================ -->
+<script>
+function bookTable(){
+  // Get what the customer typed - DO NOT change these lines
+  const name = document.getElementById('bName').value || 'Guest';
+  const phone = document.getElementById('bPhone').value;
+  const date = document.getElementById('bDate').value || 'This Weekend';
+  const people = document.getElementById('bPeople').value;
+  const occ = document.getElementById('bOccasion').value;
+  const msg = document.getElementById('bMsg').value;
+
+  // If they forgot phone number, show message
+  if(!phone) return alert('Please add your phone number');
+
+  // Build the WhatsApp message - this is what you will receive
+  let text = `Hi Kasi Vibes Lounge, I want to book a table:\n\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nPeople: ${people}\nOccasion: ${occ}\nNote: ${msg}`;
+
+  // CHANGE YOUR WHATSAPP NUMBER HERE - only the numbers 27731234567
+  window.open('https://wa.me/+27689981214?text=' + encodeURIComponent(text), '_blank');
+}
+</script>
+
+</body>
+</html>

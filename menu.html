@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Kasi Vibes Lounge</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif}</style>
+</head>
+<body class="bg-[#FAFAF8] text-[#1A1A1A]">
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <div><h1 class="font-extrabold text-xl tracking-tight">KASI VIBES</h1><p class="text-[11px] text-neutral-500 tracking-widest">LOUNGE • AKASIA, PRETORIA</p></div>
+    <nav class="flex gap-5 text-sm font-medium"><a href="revive.html">Home</a><a href="menu.html" class="text-black font-semibold">Menu</a><a href="revive.html#book">Book a Table</a></nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-5 py-10">
+  <p class="text-xs font-semibold tracking-widest text-neutral-500">OUR MENU</p>
+  <h2 class="text-4xl font-extrabold tracking-tight mt-2">Menu</h2>
+  <p class="text-neutral-600 mt-2">All prices include VAT. Ask your waiter for today's special.</p>
+
+  <div class="flex gap-2 mt-6 overflow-x-auto whitespace-nowrap pb-1">
+    <button onclick="filterMenu('all',this)" class="mbtn bg-black text-white px-5 py-2 rounded-full text-sm font-semibold">All</button>
+    <button onclick="filterMenu('food',this)" class="mbtn bg-white border border-neutral-300 px-5 py-2 rounded-full text-sm font-semibold">Food</button>
+    <button onclick="filterMenu('platter',this)" class="mbtn bg-white border border-neutral-300 px-5 py-2 rounded-full text-sm font-semibold">Platters</button>
+    <button onclick="filterMenu('drinks',this)" class="mbtn bg-white border border-neutral-300 px-5 py-2 rounded-full text-sm font-semibold">Drinks</button>
+    <button onclick="filterMenu('shisha',this)" class="mbtn bg-white border border-neutral-300 px-5 py-2 rounded-full text-sm font-semibold">Shisha</button>
+  </div>
+
+  <div id="menuGrid" class="grid md:grid-cols-2 gap-3 mt-6"></div>
+
+  <div class="bg-white border border-neutral-200 rounded-[20px] p-6 mt-10 text-center">
+    <h3 class="font-bold text-lg">Want to order?</h3>
+    <p class="text-neutral-500 text-sm mt-1">Book a table or order for collection on WhatsApp.</p>
+    <a href="revive.html#book" class="inline-block mt-4 bg-black text-white px-6 py-3 rounded-full font-semibold text-sm">Book a Table</a>
+  </div>
+</main>
+
+<footer class="border-t border-neutral-200 py-8 text-center text-sm text-neutral-500"><p class="font-bold text-black">KASI VIBES LOUNGE</p><p class="mt-1">Akasia, Pretoria, Gauteng</p></footer>
+
+<script>
+const menu=[
+ {cat:'food', name:'Kasi Burger & Chips', desc:'Beef patty, cheese, house sauce, chips', price:'R95', tag:'#1 Most Ordered'},
+ {cat:'food', name:'Grilled Chicken & Pap', desc:'Quarter chicken, pap, chakalaka, gravy', price:'R120', tag:'#2 Most Ordered'},
+ {cat:'food', name:'Wors & Chips', desc:'Boerewors, chips, tomato sauce', price:'R85', tag:''},
+ {cat:'food', name:'Chicken Wings (6pc)', desc:'BBQ, peri-peri or sweet chilli', price:'R110', tag:''},
+ {cat:'platter', name:'Vibes Platter (Serves 4)', desc:'Wings, ribs, wors, chips, onion rings', price:'R449', tag:'#3 Most Ordered'},
+ {cat:'platter', name:'Shisa Nyama Platter', desc:'Braai meat, pap, chakalaka, salads', price:'R599', tag:''},
+ {cat:'drinks', name:'Cocktail - Passion Vibe', desc:'Vodka, passion fruit, lime, soda', price:'R95', tag:''},
+ {cat:'drinks', name:'Bucket Special (6 Beers)', desc:'Castle / Black Label / Heineken', price:'R220', tag:''},
+ {cat:'drinks', name:'Milkshake - Oreo / Bar One', desc:'Thick shake, cream, chocolate', price:'R65', tag:''},
+ {cat:'shisha', name:'Shisha - Hubbly', desc:'Apple, Grape, Mint flavours. 1 hour', price:'R180', tag:''},
+];
+let f='all';
+function render(){
+  const list=menu.filter(m=>f==='all'||m.cat===f);
+  document.getElementById('menuGrid').innerHTML=list.map(m=>`<div class="bg-white border border-neutral-200 rounded-2xl p-5 flex justify-between gap-4"><div><h4 class="font-bold">${m.name} ${m.tag?`<span class="ml-1 bg-neutral-100 text-[11px] px-2 py-1 rounded-full font-semibold">${m.tag}</span>`:''}</h4><p class="text-neutral-500 text-sm mt-1">${m.desc}</p></div><span class="font-extrabold whitespace-nowrap">${m.price}</span></div>`).join('');
+}
+function filterMenu(filter,btn){ f=filter; document.querySelectorAll('.mbtn').forEach(b=>b.className='mbtn bg-white border border-neutral-300 px-5 py-2 rounded-full text-sm font-semibold'); btn.className='mbtn bg-black text-white px-5 py-2 rounded-full text-sm font-semibold'; render(); }
+render();
+</script>
+</body>
+</html>
